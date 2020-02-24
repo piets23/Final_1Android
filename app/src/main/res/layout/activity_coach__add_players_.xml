@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.piets.hockeymanagement.Coach.Coach_AddPlayers_Activity">
+
+    <TextView
+        android:id="@+id/tv_coach_add_player_to_your_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="@string/tv_coach_add_player"
+        android:textSize="@dimen/text_size"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <EditText
+        android:id="@+id/edt_coach_player_name"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_user"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="@string/edt_coach_player_name_hint"/>
+
+    <EditText
+        android:id="@+id/edt_coach_player_surname"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:inputType="textPersonName"
+        android:drawableStart="@drawable/ic_user"
+        android:layout_marginTop="@dimen/dp_20"
+        android:hint="@string/edt_coach_player_surname_hint"/>
+
+
+    <Spinner
+        android:id="@+id/spin_coach_add_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btn_coach_medical_info"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:text="@string/btn_coach_medical_info"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/primaryText"
+        android:shadowColor="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/btn_coach_save_player"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:text="@string/btn_coach_save_player"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/primaryText"
+        android:shadowColor="@color/colorAccent"/>
+
+
+</LinearLayout>

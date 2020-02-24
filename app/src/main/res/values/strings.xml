@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">Hockey Management</string>
+    <string name="empty"></string>
+    <string name="edt_password_hint">Password</string>
+    <string name="edt_login">LOGIN</string>
+    <string name="tv_register">Register</string>
+    <string name="tv_forgot_password">Forgot Password ?</string>
+    <string name="edt_email_address_hint">Email Address</string>
+    <string name="edt_name_hint">Name</string>
+    <string name="edt_surname_hint">Surname</string>
+    <string name="edt_retype_password_hint">Retype Password</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="title_activity_admin_menu_">AdminMenu_Activity</string>
+    <string name="item_logout">Logout</string>
+    <string name="tv_admin">Admin</string>
+    <string name="btn_add_team_admin">Add Team / Opponent</string>
+    <string name="btn_move_players">Move Players</string>
+    <string name="btn_coach_menu">Coach Menu</string>
+    <string name="btn_set_roles">Set Roles</string>
+    <string name="tv_coach">Coach</string>
+    <string name="btn_add_players_coach">Add Players</string>
+    <string name="btn_my_players_coach">My Players</string>
+    <string name="btn_matches_coach">Matches</string>
+    <string name="tv_add_team_or_opponent">Add Team or Opponent</string>
+    <string name="tv_choose_age_group">Choose Age Group</string>
+    <string name="tv_coach_for_the_team">Coach For The Team</string>
+    <string name="tv_team_name">Team Name</string>
+    <string name="edt_team_name_hint">Team Name</string>
+    <string name="btn_submit_team">Submit Team</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_opponent_name">Opponent Name</string>
+    <string name="edt_opponent_name_hint">Opponent Name</string>
+    <string name="btn_submit_opponent">Submit Opponent</string>
+    <string name="title_activity_coach_add_players_">CoachAddPlayers_Activity</string>
+    <string name="tv_coach_add_player">Add A Player To Your Team</string>
+    <string name="edt_coach_player_name_hint">Enter Player Name</string>
+    <string name="edt_coach_player_surname_hint">Enter Player Surname</string>
+    <string name="btn_coach_medical_info">ENTER MEDICAL INFO</string>
+    <string name="btn_coach_save_player">SAVE PLAYER</string>
+    <string name="tv_coach_add_medical_info">Add Medical Info For</string>
+    <string name="tv_coach_med_player_name">Player Name</string>
+    <string name="edt_coach_med_aid_name_hint">Medical Aid Name</string>
+    <string name="edt_coach_med_aid_plan_hint">Medical Aid Plan</string>
+    <string name="edt_coach_med_aid_Number_hint">Medical Aid Number</string>
+    <string name="edt_coach_med_allergies_hint">Allergies</string>
+    <string name="edt_coach_med_1st_parent_hint">1st Parent Cell Number</string>
+    <string name="edt_coach_med_2nd_parent_hint">2nd Parent Cell Number</string>
+    <string name="btn_coach_save_med_info_hint">SAVE MEDICAL INFO</string>
+    <string name="tv_u_16a">u/16a</string>
+    <string name="select_user">Select User</string>
+    <string name="change_role">Change Role</string>
+    <string name="none">None</string>
+    <string name="none_no_access_to_app">None ( No Access To App )</string>
+    <string name="coach_basic_access">Coach ( Basic Access )</string>
+    <string name="admin_full_access">Admin ( Full Access )</string>
+    <string name="save_changes_set_roles_btn">Save Changes</string>
+    <string name="teamsopponentslist">teamsOpponentsList</string>
+    <string name="current_team">Current Team :</string>
+    <string name="could_not_load">Could Not Load</string>
+    <string name="move_this_player_to">Move This Player To :</string>
+    <string name="move_player_">Move Player</string>
+    <string name="players_current_team">Players current team :</string>
+    <string name="could_not_load_team">Could Not Load Team!!</string>
+    <string name="move_the_player_to">Move the player to :</string>
+    <string name="move_player">Move Player</string>
+    <string name="no_player_loaded">NO PLAYER LOADED</string>
+
+    <string name="tv_coach_medical_info">Enter Medical Info for </string>
+    <string name="tv_medical_aid_name">Medical Aid Name</string>
+    <string name="tv_medical_aid_plan">Medical Aid Plan</string>
+    <string name="tv_medical_aid_number">Medical Aid Number</string>
+    <string name="tv_medical_allergies">Allergies</string>
+    <string name="tv_medical_1st_parent_cell">1st Parent Cell Number</string>
+    <string name="tv_medical_2nd_parent_cell">2nd Parent Cell Number</string>
+    <string name="btn_medical">Save Medical Info</string>
+    <string name="btn_match_line_up">Match Line-up</string>
+    <string name="btn_enter_match_stats">Enter Match Stats</string>
+
+    //match lineups
+
+    <string name="leftForward">1. Left Forward:</string>
+    <string name="rightForward">2. Right Forward:</string>
+    <string name="centerForward">3. Center Forward:</string>
+    <string name="leftLink">4. Left Link:</string>
+    <string name="rightLink">5. Right Link:</string>
+    <string name="centerLink">6. Center Link:</string>
+    <string name="leftBack">7. Left Back:</string>
+    <string name="rightBack">8. Right Back:</string>
+    <string name="centerBack">9. Center Back:</string>
+    <string name="sweeper">10. Sweeper:</string>
+    <string name="goalie">11.Goalie:</string>
+    <string name="bench">12. Bench:</string>
+    <string name="bench1">13. Bench:</string>
+    <string name="bench2">14. Bench:</string>
+    <string name="bench3">15. Bench:</string>
+    <string name="bench4">16. Bench:</string>
+    <string name="selectMatch">Select Match:</string>
+    <string name="zero">0</string>
+    <string name="select_a_team">Select A Team :</string>
+    <string name="no_data">No Data</string>
+    <string name="update_player_info">Update Player Info</string>
+    <string name="choose_match_from_the_list">Choose Match From The List:</string>
+    <string name="if_there_is_no_match_create_one_in_the_match_lineup_menu">If there is no match, create one in the match-lineup menu.</string>
+    <string name="vs">VS</string>
+
+    //match stats
+    <string name="stats">Match Stats</string>
+    <string name="title_turnOver">Turn Over / Goals</string>
+    <string name="title_circle">Circle Penetration</string>
+    <string name="title_goaLShots">Goal Shots</string>
+    <string name="title_penaltyShots">Penalty Shots</string>
+    <string name="our_team">Our Team</string>
+    <string name="erase_data">Erase Data</string>
+    <string name="txt1stHalf">1st Half</string>
+    <string name="txt2ndHalf">2nd Half</string>
+    <string name="txtCirclePenetrations">Circle Penetrations:</string>
+    <string name="txtGoalShots">Field Goal Shots:</string>
+    <string name="txtPenaltyCorners">Penalty Corners:</string>
+    <string name="_0">0</string>
+    <string name="shop_hockey_gear">SHOP HOCKEY GEAR</string>
+    <string name="extra_features">Extra Features</string>
+    <string name="rss_feed">RSS FEED</string>
+    <string name="google_maps">GOOGLE MAPS</string>
+    <string name="open_camera">OPEN CAMERA</string>
+    <string name="textview">TextView</string>
+
+
+</resources>

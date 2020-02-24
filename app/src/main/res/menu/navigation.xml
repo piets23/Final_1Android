@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/turnover_goals"
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:title="@string/title_turnOver" />
+
+    <item
+        android:id="@+id/circle_penetration"
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:title="@string/title_circle" />
+
+    <item
+        android:id="@+id/penalty_corners"
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:title="@string/title_penaltyShots" />
+    <item
+        android:id="@+id/goal_shots"
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:title="@string/title_goaLShots" />
+
+</menu>

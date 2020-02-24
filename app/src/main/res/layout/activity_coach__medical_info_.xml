@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Coach.Coach_MedicalInfo_Activity"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_coach_medical_info"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/text_size"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:text="@string/tv_coach_medical_info"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/edt_medical_aid_name"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:layout_marginTop="@dimen/dp_15"
+        android:drawableStart="@drawable/ic_hospital"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:hint="@string/tv_medical_aid_name" />
+
+    <EditText
+        android:id="@+id/edt_medical_aid_plan"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:layout_gravity="center_horizontal"
+        android:drawableStart="@drawable/ic_hospital"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:hint="@string/tv_medical_aid_plan" />
+
+    <EditText
+        android:id="@+id/edt_medical_aid_num"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableStart="@drawable/ic_hospital"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        android:hint="@string/tv_medical_aid_number" />
+
+    <EditText
+        android:id="@+id/edt_medical_allergies"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:drawableStart="@drawable/ic_hospital"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:hint="@string/tv_medical_allergies" />
+
+    <EditText
+        android:id="@+id/edt_medical_1st_parent_cell"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:ems="10"
+        android:drawableStart="@drawable/ic_contact_phone"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:hint="@string/tv_medical_1st_parent_cell" />
+
+    <EditText
+        android:id="@+id/edt_medical_2nd_parent_cell"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:drawableStart="@drawable/ic_contact_phone"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/tv_medical_2nd_parent_cell" />
+
+    <Button
+        android:id="@+id/btn_medical_save_info"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:padding="@dimen/btn_custom_padding"
+        android:text="@string/btn_medical"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_button"/>
+</LinearLayout>

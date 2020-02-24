@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.piets.hockeymanagement.Coach.PlayerInformation_Activity">
+
+
+    <TextView
+        android:id="@+id/info_player_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btn_call_parent1"
+        android:textColor="@color/primaryText"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info_player_name"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="41dp"
+        android:layout_toStartOf="@+id/info_player_name"
+        android:text="CALL PARENT 1" />
+
+    <Button
+        android:id="@+id/btn_call_parent2"
+        android:textColor="@color/primaryText"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_call_parent1"
+        android:layout_toEndOf="@+id/info_player_name"
+        android:text="CALL PARENT 2" />
+
+    <TextView
+        android:id="@+id/tv_med_aid_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_call_parent1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_toEndOf="@+id/tv_allergies"
+        android:text="Med Aid Name: " />
+
+    <TextView
+        android:id="@+id/tv_med_aid_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_med_aid_name"
+        android:layout_below="@+id/tv_med_aid_name"
+        android:layout_marginTop="24dp"
+        android:text="Med Aid Plan: " />
+
+    <TextView
+        android:id="@+id/tv_med_aid_nr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_med_aid_plan"
+        android:layout_below="@+id/tv_med_aid_plan"
+        android:layout_marginTop="18dp"
+        android:text="Med Aid Nr: " />
+
+    <TextView
+        android:id="@+id/tv_allergies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_call_parent1"
+        android:layout_below="@+id/tv_med_aid_nr"
+        android:layout_marginTop="42dp"
+        android:text="Allergies:" />
+
+    <TextView
+        android:id="@+id/tv_allergies_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_allergies"
+        android:layout_below="@+id/tv_allergies"
+        android:layout_marginTop="16dp"
+        android:text="@string/no_data" />
+
+    <TextView
+        android:id="@+id/tv_med_aid_name_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_med_aid_name"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/tv_med_aid_name"
+        android:text="@string/no_data" />
+
+    <TextView
+        android:id="@+id/tv_med_aid_plan_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_med_aid_name_data"
+        android:layout_alignTop="@+id/tv_med_aid_plan"
+        android:text="@string/no_data" />
+
+    <TextView
+        android:id="@+id/tv_med_aid_nr_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_med_aid_plan_data"
+        android:layout_alignTop="@+id/tv_med_aid_nr"
+        android:text="@string/no_data" />
+
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/add_team_fragment"
+    tools:context="com.example.piets.hockeymanagement.Admin.AddTeam_Fragment">
+
+
+    <TextView
+        android:id="@+id/tv_add_team_opponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="@string/tv_choose_age_group"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <Spinner
+        android:id="@+id/spin_age_group_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_coach_for_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="@string/tv_coach_for_the_team"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <Spinner
+        android:id="@+id/spin_coach_for_team_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tv_team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:text="@string/tv_team_name"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        />
+
+    <EditText
+        android:id="@+id/edt_team_name_addTeam"
+        android:layout_width="@dimen/edt_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawableLeft="@drawable/ic_team"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="monospace"
+        android:drawablePadding="@dimen/dp_15"
+        android:hint="@string/edt_team_name_hint"
+        />
+
+    <Button
+        android:id="@+id/btn_submit_team"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_25"
+        android:background="@drawable/rounded_button"
+        android:shadowColor="@color/colorAccent"
+        android:text="@string/btn_submit_team"
+        android:textColor="@color/primaryText" />
+
+</LinearLayout>

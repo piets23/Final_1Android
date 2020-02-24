@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.piets.hockeymanagement.Coach.Match_LineUp_activity"
+ >
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_200"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/line_up_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+
+        <TextView
+            android:id="@+id/txtSelectMatch"
+            android:layout_width="128dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/selectMatch"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spin_user_teams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSelectMatch" />
+
+
+        <Spinner
+            android:id="@+id/spin_all_opponents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/spin_user_teams"
+            app:layout_constraintTop_toBottomOf="@+id/txtSelectMatch" />
+
+        <Spinner
+            android:id="@+id/spin_match_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/spin_all_opponents"
+            app:layout_constraintTop_toBottomOf="@+id/txtSelectMatch"/>
+
+        <TextView
+            android:id="@+id/txtLeftForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/leftForward"
+            android:textSize="@dimen/dp_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spin_user_teams" />
+
+        <Spinner
+            android:id="@+id/spin_left_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/txtLeftForward"
+            app:layout_constraintTop_toBottomOf="@+id/spin_all_opponents" />
+
+        <RatingBar
+
+            android:id="@+id/ratingLeftForward"
+            style="@style/ImageRatingBar"
+            android:progressTint="@color/rating"
+            android:layout_width="@dimen/rating_bar_width"
+            android:layout_height="44dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftForward"
+            app:layout_constraintTop_toBottomOf="@+id/spin_left_forward" />
+
+        <TextView
+            android:id="@+id/txtGoalLeftForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="20dp"
+            android:text="Goal:"
+            app:layout_constraintStart_toStartOf="@+id/ratingLeftForward"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLeftForward" />
+
+        <EditText
+            android:id="@+id/edtGoalLeftForward"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalLeftForward"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLeftForward" />
+
+
+        <TextView
+            android:id="@+id/txtRightFoward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/rightForward"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalLeftForward" />
+
+        <Spinner
+            android:id="@+id/spin_right_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_left_forward"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalLeftForward" />
+
+        <RatingBar
+            android:id="@+id/ratingRightForward"
+            android:layout_height="45dp"
+            android:progressTint="@color/rating"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtRightFoward"
+            app:layout_constraintTop_toBottomOf="@+id/spin_right_forward" />
+
+        <TextView
+            android:id="@+id/txtGoalRightFoward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="20dp"
+            android:text="Goal: "
+            app:layout_constraintStart_toStartOf="@+id/ratingRightForward"
+            app:layout_constraintTop_toBottomOf="@+id/ratingRightForward" />
+
+        <EditText
+            android:id="@+id/edtRightForward"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalRightFoward"
+            app:layout_constraintTop_toBottomOf="@+id/ratingRightForward" />
+
+        <TextView
+            android:id="@+id/txtCenterForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/centerForward"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalRightFoward" />
+
+        <Spinner
+            android:id="@+id/spin_center_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_right_forward"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/txtCenterForward"
+            app:layout_constraintTop_toBottomOf="@+id/edtRightForward" />
+
+        <RatingBar
+            android:id="@+id/ratingCenterForward"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:progressTint="@color/rating"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtCenterForward"
+            app:layout_constraintTop_toBottomOf="@+id/spin_center_forward" />
+
+        <TextView
+            android:id="@+id/txtGoalCenterForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="20dp"
+            android:text="Goals:"
+            app:layout_constraintStart_toStartOf="@+id/ratingCenterForward"
+            app:layout_constraintTop_toBottomOf="@+id/ratingCenterForward" />
+
+        <EditText
+            android:id="@+id/edtGoalCenterForward"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalCenterForward"
+            app:layout_constraintTop_toBottomOf="@+id/ratingCenterForward" />
+
+        <TextView
+            android:id="@+id/txtLeftLink"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/leftLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalCenterForward" />
+
+        <Spinner
+            android:id="@+id/spin_left_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_center_forward"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalCenterForward" />
+
+        <RatingBar
+            android:id="@+id/ratingLeftLink"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:progressTint="@color/rating"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftLink"
+            app:layout_constraintTop_toBottomOf="@+id/spin_left_link" />
+
+        <TextView
+            android:id="@+id/txtGoalLeftLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingLeftLink"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLeftLink" />
+
+        <EditText
+            android:id="@+id/edtGoalsLeftLink"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalLeftLink"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLeftLink" />
+
+        <TextView
+            android:id="@+id/txtRightLink"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/rightLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalLeftLink" />
+
+        <Spinner
+            android:id="@+id/spin_right_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_left_link"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsLeftLink" />
+
+        <RatingBar
+            android:id="@+id/ratingRightLink"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:progressTint="@color/rating"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtRightLink"
+            app:layout_constraintTop_toBottomOf="@+id/spin_right_link" />
+
+        <TextView
+            android:id="@+id/txtGoalRightLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingRightLink"
+            app:layout_constraintTop_toBottomOf="@+id/ratingRightLink" />
+
+        <EditText
+            android:id="@+id/edtGoalsRightLink"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalRightLink"
+            app:layout_constraintTop_toBottomOf="@+id/ratingRightLink" />
+
+        <TextView
+            android:id="@+id/txtCenterLink"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/centerLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalRightLink" />
+
+        <Spinner
+            android:id="@+id/spin_center_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_right_link"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsRightLink" />
+
+        <RatingBar
+            android:id="@+id/ratingCenterLink"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtCenterLink"
+            app:layout_constraintTop_toBottomOf="@+id/spin_center_link" />
+
+        <TextView
+            android:id="@+id/txtGoalCenterLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingCenterLink"
+            app:layout_constraintTop_toBottomOf="@+id/ratingCenterLink" />
+
+        <EditText
+            android:id="@+id/edtGoalsCenterLink"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalCenterLink"
+            app:layout_constraintTop_toBottomOf="@+id/ratingCenterLink" />
+
+        <TextView
+            android:id="@+id/txtLeftBack"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/leftBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalCenterLink" />
+
+        <Spinner
+            android:id="@+id/spin_left_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_center_link"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsCenterLink" />
+
+        <RatingBar
+            android:id="@+id/ratingLeftBack"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:progressTint="@color/rating"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtLeftBack"
+            app:layout_constraintTop_toBottomOf="@+id/spin_left_back" />
+
+        <TextView
+            android:id="@+id/txtGoalLeftBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingLeftBack"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLeftBack" />
+
+        <EditText
+            android:id="@+id/edtGoalsLeftBack"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalLeftBack"
+            app:layout_constraintTop_toBottomOf="@+id/ratingLeftBack" />
+
+        <TextView
+            android:id="@+id/txtRightBack"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/rightBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalLeftBack" />
+
+        <Spinner
+            android:id="@+id/spin_right_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_left_back"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsLeftBack" />
+
+        <RatingBar
+            android:id="@+id/ratingRightBack"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtRightBack"
+            app:layout_constraintTop_toBottomOf="@+id/spin_right_back" />
+
+        <TextView
+            android:id="@+id/txtGoalRightBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingRightBack"
+            app:layout_constraintTop_toBottomOf="@+id/ratingRightBack" />
+
+        <EditText
+            android:id="@+id/edtGoalsRightBack"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalRightBack"
+            app:layout_constraintTop_toBottomOf="@+id/ratingRightBack" />
+
+        <TextView
+            android:id="@+id/txtCenterBack"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/centerBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalRightBack" />
+
+        <Spinner
+            android:id="@+id/spin_center_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_right_back"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsRightBack" />
+
+        <RatingBar
+            android:id="@+id/ratingCenterBack"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtCenterBack"
+            app:layout_constraintTop_toBottomOf="@+id/spin_center_back" />
+
+        <TextView
+            android:id="@+id/txtGoalCenterBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingCenterBack"
+            app:layout_constraintTop_toBottomOf="@+id/ratingCenterBack" />
+
+        <EditText
+            android:id="@+id/edtGoalsCenterBack"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalCenterBack"
+            app:layout_constraintTop_toBottomOf="@+id/ratingCenterBack" />
+
+        <TextView
+            android:id="@+id/txtSweeper"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/sweeper"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalCenterBack" />
+
+        <Spinner
+            android:id="@+id/spin_sweeper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_center_back"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsCenterBack" />
+
+        <RatingBar
+            android:id="@+id/ratingSweeper"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtSweeper"
+            app:layout_constraintTop_toBottomOf="@+id/spin_sweeper" />
+
+        <TextView
+            android:id="@+id/txtGoalSweeper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingSweeper"
+            app:layout_constraintTop_toBottomOf="@+id/ratingSweeper" />
+
+        <EditText
+            android:id="@+id/edtGoalsSweeper"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalSweeper"
+            app:layout_constraintTop_toBottomOf="@+id/ratingSweeper" />
+
+        <TextView
+            android:id="@+id/txtGoalie"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/goalie"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalSweeper" />
+
+        <Spinner
+            android:id="@+id/spin_goalie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_sweeper"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsSweeper" />
+
+        <RatingBar
+            android:id="@+id/ratingGoalie"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtGoalie"
+            app:layout_constraintTop_toBottomOf="@+id/spin_goalie" />
+
+        <TextView
+            android:id="@+id/txtGoalGoalie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingGoalie"
+            app:layout_constraintTop_toBottomOf="@+id/ratingGoalie" />
+
+        <EditText
+            android:id="@+id/edtGoalsGoalie"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalGoalie"
+            app:layout_constraintTop_toBottomOf="@+id/ratingGoalie" />
+
+
+        <TextView
+            android:id="@+id/txtBench1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/bench"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalGoalie" />
+
+        <Spinner
+            android:id="@+id/selectBench1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/spin_goalie"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsGoalie" />
+
+        <RatingBar
+            android:id="@+id/ratingBench1"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtBench1"
+            app:layout_constraintTop_toBottomOf="@+id/selectBench1" />
+
+        <TextView
+            android:id="@+id/txtGoalBench1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingBench1"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench1" />
+
+        <EditText
+            android:id="@+id/edtGoalsBench1"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalBench1"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench1" />
+
+        <TextView
+            android:id="@+id/txtBench2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/bench1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalBench1" />
+
+        <Spinner
+            android:id="@+id/selectBench2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/selectBench1"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsBench1" />
+
+        <RatingBar
+            android:id="@+id/ratingBench2"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtBench2"
+            app:layout_constraintTop_toBottomOf="@+id/selectBench2" />
+
+        <TextView
+            android:id="@+id/txtGoalBench2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingBench2"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench2" />
+
+        <EditText
+            android:id="@+id/edtGoalsBench2"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalBench2"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench2" />
+
+        <TextView
+            android:id="@+id/txtBench3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/bench2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalBench2" />
+
+        <Spinner
+            android:id="@+id/selectBench3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/selectBench2"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsBench2" />
+
+        <RatingBar
+            android:id="@+id/ratingBench3"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtBench3"
+            app:layout_constraintTop_toBottomOf="@+id/selectBench3" />
+
+        <TextView
+            android:id="@+id/txtGoalBench3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="44dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingBench3"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench3" />
+
+        <EditText
+            android:id="@+id/edtGoalsBench3"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalBench3"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench3" />
+
+
+        <TextView
+            android:id="@+id/txtBench4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/bench3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalBench3" />
+
+        <Spinner
+            android:id="@+id/selectBench4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/selectBench3"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsBench3" />
+
+        <RatingBar
+            android:id="@+id/ratingBench4"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:progressTint="@color/rating"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtBench4"
+            app:layout_constraintTop_toBottomOf="@+id/selectBench4" />
+
+        <TextView
+            android:id="@+id/txtGoalBench4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingBench4"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench4" />
+
+        <EditText
+            android:id="@+id/edtGoalsBench4"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalBench4"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench4" />
+
+        <TextView
+            android:id="@+id/txtBench5"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/dp_8dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/bench4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtGoalBench4" />
+
+        <Spinner
+            android:id="@+id/selectBench5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/selectBench4"
+            app:layout_constraintTop_toBottomOf="@+id/edtGoalsBench4" />
+
+        <RatingBar
+            android:id="@+id/ratingBench5"
+            android:layout_height="44dp"
+            android:layout_width="@dimen/rating_bar_width"
+            style="@style/ImageRatingBar"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:progressTint="@color/rating"
+            app:layout_constraintStart_toStartOf="@+id/txtBench5"
+            app:layout_constraintTop_toBottomOf="@+id/selectBench5" />
+
+        <TextView
+            android:id="@+id/txtGoalBench5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
+            android:text="Goals: "
+            app:layout_constraintStart_toStartOf="@+id/ratingBench5"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench5" />
+
+        <EditText
+            android:id="@+id/edtGoalsBench5"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/zero"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/txtGoalBench5"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBench5" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
+
+
+
+</ScrollView>

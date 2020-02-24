@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.piets.hockeymanagement">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+        <activity android:name=".Login_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register_Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login_Activity" />
+
+        </activity>
+        <activity android:name=".Admin.AdminMenu_Activity" />
+        <activity android:name=".Coach.CoachMenu_Activity" />
+        <activity android:name=".Admin.AddTeam_Opponent_Activity" />
+        <activity android:name=".Coach.Coach_AddPlayers_Activity" />
+        <activity android:name=".Admin.SetRoles_Activity" />
+        <activity android:name=".Admin.MovePlayers_Activity" />
+        <activity android:name=".Admin.AllPlayersList_Activity" />
+        <activity android:name=".Coach.Coach_MedicalInfo_Activity" />
+        <activity android:name=".Coach.Match_LineUp_activity" />
+        <activity android:name=".Coach.MatchesMenu_Activity" />
+        <activity android:name=".Coach.MyPlayersList_Activity" />
+        <activity android:name=".Extras.RSS_activity" />
+        <activity android:name=".Coach.PlayerInformation_Activity" />
+        <activity android:name=".Coach.EditPlayer_Activity" />
+        <activity android:name=".Coach.MatchStats.MainActivity" />
+        <activity android:name=".Coach.Coach_MatchForTeams_Activity" />
+        <activity android:name=".Teams_Opponent_Recycle_Activity" />
+        <activity android:name=".Extras.Google_Maps_Activity" />
+
+        <receiver android:name=".Extras.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetinfo" />
+        </receiver>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".Coach.Coach_AllMatchesLineUp_List" />
+        <activity android:name=".Extra_Activity" />
+        <activity android:name=".WebView_Activity"></activity>
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.piets.hockeymanagement.Extra_Activity">
+
+    <Button
+        android:id="@+id/btn_webView_coach"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorAccent"
+        android:text="@string/shop_hockey_gear"
+        android:textColor="@color/primaryText" />
+
+    <Button
+        android:id="@+id/btn_rssFeed"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorAccent"
+        android:text="@string/rss_feed"
+        android:textColor="@color/primaryText" />
+
+    <Button
+        android:id="@+id/btnGooglemaps"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorAccent"
+        android:text="@string/google_maps"
+        android:textColor="@color/primaryText" />
+
+    <Button
+        android:id="@+id/btnCamera"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_15"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_horizontal"
+        android:shadowColor="@color/colorAccent"
+        android:text="@string/open_camera"
+        android:textColor="@color/primaryText" />
+
+</LinearLayout>

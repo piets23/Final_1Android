@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.piets.hockeymanagement.Admin.SetRoles_Activity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvlblChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/select_user"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spnUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/tvlblChangeRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center_vertical|center"
+        android:text="@string/change_role"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbtnNone"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/none_no_access_to_app" />
+
+        <RadioButton
+            android:id="@+id/rbtnCoach"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_weight="1"
+            android:text="@string/coach_basic_access" />
+
+        <RadioButton
+            android:id="@+id/rbtnAdmin"
+            android:layout_width="@dimen/dp_200"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_50"
+            android:layout_marginRight="@dimen/dp_50"
+            android:layout_weight="1"
+            android:text="@string/admin_full_access" />
+
+    </RadioGroup>
+
+    <Button
+
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="@dimen/btn_custom_width"
+        android:layout_height="@dimen/btn_custom_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rounded_button"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="@string/save_changes_set_roles_btn" />
+
+</LinearLayout>

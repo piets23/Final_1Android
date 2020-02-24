@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Coach.MatchStats.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <RadioGroup
+        android:id="@+id/rgPenaltyCorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbFirstHalfPenalty"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt1stHalf" />
+
+        <RadioButton
+            android:id="@+id/rbSecondHalfPenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt2ndHalf" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvPenaltyCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/txtPenaltyCorners"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFirstHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt1stHalf"
+        app:layout_constraintEnd_toStartOf="@+id/tvSecondHalf"
+        app:layout_constraintTop_toBottomOf="@+id/tvPenaltyCorner" />
+
+    <TextView
+        android:id="@+id/tvSecondHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt2ndHalf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPenaltyCorner" />
+
+    <TextView
+        android:id="@+id/firstHalfPenalties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPenaltyShots"
+        app:layout_constraintEnd_toEndOf="@+id/tvFirstHalf"
+        app:layout_constraintStart_toStartOf="@+id/tvFirstHalf"
+        app:layout_constraintTop_toBottomOf="@+id/tvFirstHalf"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/secondhalfPenalty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/firstHalfPenalties"
+        app:layout_constraintEnd_toEndOf="@+id/tvSecondHalf"
+        app:layout_constraintStart_toStartOf="@+id/tvSecondHalf"
+        app:layout_constraintTop_toTopOf="@+id/firstHalfPenalties" />
+
+    <TextView
+        android:id="@+id/tvOurTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Our Team"
+        app:layout_constraintBaseline_toBaselineOf="@+id/firstHalfPenalties"
+        app:layout_constraintEnd_toStartOf="@+id/firstHalfPenalties"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="0dp"
+        android:layout_height="226dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutPenaltyShots"
+        app:layout_constraintVertical_bias="0.75">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartPenaltyCorners"
+            android:layout_width="match_parent"
+            android:layout_height="218dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPenaltyShots"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464">
+
+        <TextView
+            android:id="@+id/pointRedPenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointOrangePenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointYellowPenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointGreenPenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointedBluePenalty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnErasePenaltyCorners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/erase_data"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPenaltyCorner"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

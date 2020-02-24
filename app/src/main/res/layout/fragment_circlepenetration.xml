@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Coach.MatchStats.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RadioGroup
+        android:id="@+id/rgGoalShots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8dp"
+        android:layout_marginStart="@dimen/dp_8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/firstHalf"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/txt1stHalf" />
+
+        <RadioButton
+            android:id="@+id/secondHalf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txt2ndHalf" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvFieldGoalShots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/txtCirclePenetrations"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFirstHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt1stHalf"
+        app:layout_constraintEnd_toStartOf="@+id/tvSecondHalf"
+        app:layout_constraintTop_toBottomOf="@+id/tvFieldGoalShots" />
+
+    <TextView
+        android:id="@+id/tvSecondHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/txt2ndHalf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFieldGoalShots" />
+
+    <TextView
+        android:id="@+id/tvOurTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/our_team"
+        app:layout_constraintBaseline_toBaselineOf="@+id/firstHalfTotal"
+        app:layout_constraintEnd_toStartOf="@+id/firstHalfTotal"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/counterLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_8dp"
+        android:layout_marginEnd="@dimen/dp_8dp"
+        android:layout_marginStart="@dimen/dp_8dp"
+        android:layout_marginTop="@dimen/dp_8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472">
+
+
+        <TextView
+            android:id="@+id/pointRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_red_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointOrangeGoalShots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@color/yellow"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_green_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="0"
+            android:textColor="@android:color/holo_blue_light"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_8dp"
+        android:layout_marginEnd="@dimen/dp_8dp"
+        android:layout_marginStart="@dimen/dp_8dp"
+        android:layout_marginTop="@dimen/dp_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/counterLinearLayout">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/firstHalfTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/dp_8dp"
+        android:layout_marginEnd="@dimen/dp_8dp"
+        android:layout_marginStart="@dimen/dp_8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/counterLinearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/tvFirstHalf"
+        app:layout_constraintStart_toStartOf="@+id/tvFirstHalf"
+        app:layout_constraintTop_toBottomOf="@+id/tvFirstHalf"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnEraseCirclePenetrations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="@dimen/dp_8dp"
+        android:text="@string/erase_data"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvFieldGoalShots"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/secondHalfGoalShotsTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/dp_8dp"
+        android:layout_marginEnd="@dimen/dp_8dp"
+        android:layout_marginStart="@dimen/dp_8dp"
+        android:layout_marginTop="@dimen/dp_8dp"
+        android:gravity="right"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/firstHalfTotal"
+        app:layout_constraintEnd_toEndOf="@+id/tvSecondHalf"
+        app:layout_constraintStart_toStartOf="@+id/tvSecondHalf"
+        app:layout_constraintTop_toTopOf="@+id/firstHalfTotal" />
+
+</android.support.constraint.ConstraintLayout>
